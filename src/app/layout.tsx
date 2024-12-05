@@ -65,20 +65,35 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex items-end justify-end">
-          <Avatar>
-            <AvatarImage
-              src="https://github.com/shadcn.png"
-              onClick={() => {
-                router.push("/");
-              }}
-            />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <div className="ml-2 text-sm font-medium">Customer ID: {user.id}</div>
-          <div className="ml-2 text-sm font-medium">Email: {user.email}</div>
-          <div className="ml-2 mr-4 text-sm font-medium">Balance: {user.balance}</div>
-        </div>
+       <div className="flex justify-between items-center p-4">
+  {/* Left section: Home */}
+  <div
+    className="text-lg font-medium cursor-pointer"
+    onClick={() => {
+      router.push("/");
+    }}
+  >
+    HOME
+  </div>
+
+  {/* Right section: Avatar and user details */}
+  <div className="flex items-center">
+    <Avatar>
+      <AvatarImage
+        src="https://github.com/shadcn.png"
+        onClick={() => {
+          router.push("/");
+        }}
+      />
+      <AvatarFallback>CN</AvatarFallback>
+    </Avatar>
+    <div className="ml-2 text-sm font-medium">Customer ID: {user.id}</div>
+    <div className="ml-2 text-sm font-medium">Email: {user.email}</div>
+    <div className="ml-2 mr-4 text-sm font-medium">Balance: {user.balance}</div>
+  </div>
+</div>
+
+
         {children}
         <Toaster />
       </body>

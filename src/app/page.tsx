@@ -30,6 +30,10 @@ export default function Home() {
 <Button variant="secondary" onClick={(()=>{
           router.push('/order')
         })}>Placing an order</Button>
+
+<Button variant="secondary" onClick={(()=>{
+          router.push('/orders')
+        })}>View orders</Button>
 <LoginPreview/>
 
       </main>
