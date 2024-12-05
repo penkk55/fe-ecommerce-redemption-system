@@ -89,6 +89,10 @@ const Page = () => {
   // Columns definition
   const columns: ColumnDef<any, any>[] = [
     {
+      header: 'ID',
+      accessorKey: 'id',
+    },
+    {
       header: 'Name',
       accessorKey: 'name',
     },
@@ -96,6 +100,7 @@ const Page = () => {
       header: 'Price',
       accessorKey: 'price',
     },
+    
   ]
 
   // Fetch data from the API
@@ -113,7 +118,7 @@ const Page = () => {
           setError("Failed to fetch data")
         }
       } catch (err) {
-        setError("An error occurred while fetching data")
+        setError("An error occurred while fetching data " +err)
       } finally {
         setLoading(false)
       }
