@@ -91,7 +91,7 @@ export default function InputForm() {
           </pre>
         ),
       });
-    } catch (error) {
+    } catch (error:any) {
       toast({
         variant: "destructive",
         title: "Error Submitting Order",

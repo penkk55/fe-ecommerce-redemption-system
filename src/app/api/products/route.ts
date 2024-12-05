@@ -1,11 +1,4 @@
-// export async function GET() {
-//   console.log('ddd');
-//   fetch("localhost:8000/v1/api/products")
-//     return Response.json({ message: 'Hello World' })
-//   }
-
 // app/api/products/route.ts
-
 export async function GET() {
   const backendUrl = process.env.BACKEND_ENDPOINT;
 console.log('backendUrlbackendUrl',backendUrl);

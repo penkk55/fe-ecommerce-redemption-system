@@ -5,9 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation"; // Use next/navigation instead of next/router
 import { Button } from "@/components/ui/button"
 import {LoginPreview} from "@/components/login/login"
-export function ButtonDemo() {
-  return <Button>Button</Button>
-}
+
 
 
 export default function Home() {
